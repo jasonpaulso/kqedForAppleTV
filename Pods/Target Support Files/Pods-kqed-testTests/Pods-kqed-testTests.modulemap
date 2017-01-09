@@ -1,0 +1,6 @@
+framework module Pods_kqed_testTests {
+  umbrella header "Pods-kqed-testTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
