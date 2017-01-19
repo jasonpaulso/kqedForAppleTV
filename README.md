@@ -7,4 +7,4 @@ Built with in Swift with Alamofire via Cocoapods.
 
 This app should be easily compiled in Xcode and likely run on your Apple TV with a bit of work - YMMV.
 
-Neither this app nor it's developer is in no way affiliated with KQED radio - though he's clearly a big fan.
+Neither this app nor it's developer is in any way affiliated with KQED radio - though he's clearly a big fan.
