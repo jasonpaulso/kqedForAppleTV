@@ -12,14 +12,6 @@ import AVFoundation
 import Alamofire
 import Foundation
 
-extension Double {
-    /// Rounds the double to decimal places value
-    func roundTo(places:Int) -> Double {
-        let divisor = pow(10.0, Double(places))
-        return (self * divisor).rounded() / divisor
-    }
-}
-
 
 class ViewController: UIViewController {
     
@@ -32,8 +24,7 @@ class ViewController: UIViewController {
     let dateFormatter = DateFormatter()
     var player:AVPlayer?
     var playState:Int?
-//    var weatherData:AnyObject?
- 
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +32,7 @@ class ViewController: UIViewController {
         startClock()
         stopPlayer()
         pressPlay()
-//        getWeather()
-//        logInToNPR()
+
         UIApplication.shared.isIdleTimerDisabled = true
     }
     
@@ -50,25 +40,11 @@ class ViewController: UIViewController {
         UIApplication.shared.isIdleTimerDisabled = false
     }
 
-//    func getWeather() {
-//        Alamofire.request("https://api.darksky.net/forecast/db9820540c1c18b4d4eaf24dbdd69032/37.8267,-122.4233").responseJSON { response in
-//            debugPrint(response)
-//            let weatherData = JSON(response.result.value!)
-//            let forecastData = weatherData["currently"]["temperature"].intValue
-////            let todayData = weatherData["current_observation"]["temp_f"]
-//            self.weatherLabel.text = "Current Temperature:" + " " + String(forecastData) + "f"
-//            print("Data", forecastData)
-////            self.nowTemp.text = String(round(todayData.doubleValue))
-//            
-//        }
+//    func setBackground() {
+//                let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+//                backgroundImage.image = #imageLiteral(resourceName: "kqed")
+//                self.view.insertSubview(backgroundImage, at: 0)
 //    }
-    
-    func setBackground() {
-        
-        //        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        //        backgroundImage.image = #imageLiteral(resourceName: "kqed")
-        //        self.view.insertSubview(backgroundImage, at: 0)
-    }
     
     func startClock() {
         dateFormatter.dateStyle = .medium
@@ -143,12 +119,9 @@ class ViewController: UIViewController {
     
     override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
         
-        
         if(presses.first?.type == UIPressType.playPause) {
             pressPlay()
-            
         } else {
-            
             super.pressesBegan(presses, with: event)
         }
     }
