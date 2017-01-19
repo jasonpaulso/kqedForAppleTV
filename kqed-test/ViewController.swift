@@ -21,14 +21,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var nowTemp: UILabel!
     
     @IBOutlet weak var weatherLabel: UILabel!
+    
     let dateFormatter = DateFormatter()
     var player:AVPlayer?
-    var playState:Int?
+    var isPlaying: Bool?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.playState = 0
+        isPlaying = true
         startClock()
         stopPlayer()
         pressPlay()
@@ -39,12 +40,6 @@ class ViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         UIApplication.shared.isIdleTimerDisabled = false
     }
-
-//    func setBackground() {
-//                let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-//                backgroundImage.image = #imageLiteral(resourceName: "kqed")
-//                self.view.insertSubview(backgroundImage, at: 0)
-//    }
     
     func startClock() {
         dateFormatter.dateStyle = .medium
@@ -63,12 +58,13 @@ class ViewController: UIViewController {
     }
     
     func pressPlay() {
-        if (self.playState == 0) {
-            initPlayer(station: "kqed")
-            btnPlay.setTitle("Stop", for: UIControlState.normal)
-        } else {
+        isPlaying = !isPlaying!
+        if isPlaying! {
             stopPlayer()
             btnPlay.setTitle("Play", for: UIControlState.normal)
+        } else {
+            initPlayer(station: "kqed")
+            btnPlay.setTitle("Stop", for: UIControlState.normal)
         }
     }
     
@@ -100,7 +96,6 @@ class ViewController: UIViewController {
 
             }
             player!.play()
-            self.playState = 1
         }
     }
     
@@ -110,7 +105,6 @@ class ViewController: UIViewController {
             play.pause()
             player = nil
             print("player deallocated")
-            self.playState = 0
         } else {
             print("player was already deallocated")
         }
