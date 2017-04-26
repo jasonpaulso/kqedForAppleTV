@@ -1,10 +1,36 @@
-# kqed_for_apple_tv
-I was annoyed that the Apple Music app for Apple TV took so many clicks to get to the KQED live stream, so I built an app to do it in just one.
+# [kqedForAppleTV]
 
-This is really just a proof of concept for me, in addition to solving a minor but persistent annoyance - namely the Apple Music app for Apple TV, somewhat understandably, makes it more complicated to get to third-party streaming stations than it does it's own offerings.
+An app that does one thing and dones that one thing well. Play KQED with one tap of your Apple TV remote.
 
-Built with in Swift with Alamofire via Cocoapods. 
+## Installation
 
-This app should be easily compiled in Xcode and likely run on your Apple TV with a bit of work - YMMV.
+1. Make sure you've installed all requirements
+2. Clone this repository:
+  `git clone https://github.com/jasonpaulso/[kqedForAppleTV`
+3. Build and run from Xcode either on a provisioned device or in the simulator
 
-Neither this app nor it's developer is in any way affiliated with KQED radio - though he's clearly a big fan.
+## Usage
+
+Here's a short explanation how to use `[repository]`:
+
+* Run the app and let it play - or pause it.
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch: `git checkout -b feature/my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin feature/my-new-feature`
+5. Submit a pull request
+
+## Requirements / Dependencies
+
+* Should compile in the current stable release of Xcode
+
+## Version
+
+1.0.0
+
+## License
+
+[MIT](LICENSE)
