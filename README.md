@@ -1,4 +1,4 @@
-# [kqedForAppleTV]
+# kqedForAppleTV
 
 An app that does one thing and dones that one thing well. Play KQED with one tap of your Apple TV remote.
 
@@ -11,7 +11,7 @@ An app that does one thing and dones that one thing well. Play KQED with one tap
 
 ## Usage
 
-Here's a short explanation how to use `[repository]`:
+Here's a short explanation how to use `kqedForAppleTV`:
 
 * Run the app and let it play - or pause it.
 
